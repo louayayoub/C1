@@ -1,1 +1,15 @@
-theme: jekyll-theme-cayman
+remote_theme: ISSAE/architect
+
+name: MongoDB Tutorial
+
+author: Louay Ayoub
+
+author_email: louay.ayoub@isae.edu.lb
+
+title: MongoDB Tutorial
+
+repository: louayayoub/C1
+
+plugins:
+  - jekyll-sitemap
+  - jekyll-seo-tag
