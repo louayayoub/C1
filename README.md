@@ -8,17 +8,17 @@ Avant de commencer à voir en détail le fonctionnement de MongoDB, il faut comp
 
 ## Document 
 Un document JSON, c'est simplement un ensemble de clés et de valeurs dont la notation est la suivante :
-
+```
 {
 "first_name": "Richard",
 "last_name": "Dawkins",
 "job":"ethologist",
 "age": 73
 }
-
+```
 Dans cette exemple, first_name est la clé , Richard est la valeur.
 Plusieurs documents peuvent être imbriqués ensemble pour former un documents plus complexe :
-
+```
 {
 "first_name": "Richard",
 "last_name": "Dawkins",
@@ -30,9 +30,9 @@ address : {
     "country":"UK"
     }
 }
-
+```
 Il est également possible de mettre des listes :
-
+```
 {
 "first_name": "Richard",
 "last_name": "Dawkins",
@@ -43,14 +43,14 @@ books: [
 {"title": "The blind watchmaker", "date":"1956"},
 {"title":"The magic of Reality", date:"2011", "page_count":200}
 ]
-
+```
 Si vous regardez la liste de livres, vous remarquerez qu'il n'est pas nécessaire de respecter la cohérence des champs d'une base Sql. En effet, il y a deux champs title et date pour les deux premiers livres, et 3 pour le dernier.
 
 
 ## Collection
 
 Une collection est tous simplement un ensemble de document. On peut la comparer à une table. Par exemple, une collection de 50 auteurs contiendra 50 documents comme défini plus haut. MongoDB intègre des index notés _id unique pour chaque document.
-
+```
 {
 "_id" : 0
 "first_name": "Richard",
@@ -66,7 +66,7 @@ Une collection est tous simplement un ensemble de document. On peut la comparer 
 "first_name": "François",
 "last_name": "Jacob",
  },
- 
+ ```
 Sachez que le format JSON, provient directement du langage Javascript. D'ailleurs JSON veut dire JavaScript Object Notation. C'est pour cette raison que MongoDB utilise javascript par defaut afin de manipuler sa base.
 
 # Premier pas avec MongoDB
