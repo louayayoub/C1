@@ -66,6 +66,7 @@ Une collection est tous simplement un ensemble de document. On peut la comparer 
 "first_name": "François",
 "last_name": "Jacob",
  },
+ .....
  ```
 Sachez que le format JSON, provient directement du langage Javascript. D'ailleurs JSON veut dire JavaScript Object Notation. C'est pour cette raison que MongoDB utilise javascript par defaut afin de manipuler sa base.
 
