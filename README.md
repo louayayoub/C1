@@ -70,7 +70,7 @@ Une collection est tous simplement un ensemble de document. On peut la comparer 
 Sachez que le format JSON, provient directement du langage Javascript. D'ailleurs JSON veut dire JavaScript Object Notation. C'est pour cette raison que MongoDB utilise javascript par defaut afin de manipuler sa base.
 
 # Premier pas avec MongoDB
-
-##Installation
-
+## Installation
 je vous invite à le télécharger depuis ce lien [MongoDB Download](https://pages.github.com/)
+Si vous êtes sous Linux ubuntu vous pouvez facilement utilisé ce command : 
+```sudo apt-get install MongoDB```
