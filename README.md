@@ -6,7 +6,7 @@ Fini le temps ou il fallait créer un schéma de tables relationnelles et créer
 # Collection et Documents
 Avant de commencer à voir en détail le fonctionnement de MongoDB, il faut comprendre différentes notions. MongoDB stocke ses données sous le même format qu'un document JSON. Pour être plus exact, c'est la version binaire du JSON appelé BSON. Mais alors, c'est quoi un document JSON ?
 
-- Document 
+## Document 
 Un document JSON, c'est simplement un ensemble de clés et de valeurs dont la notation est la suivante :
 
 {
@@ -47,7 +47,7 @@ books: [
 Si vous regardez la liste de livres, vous remarquerez qu'il n'est pas nécessaire de respecter la cohérence des champs d'une base Sql. En effet, il y a deux champs title et date pour les deux premiers livres, et 3 pour le dernier.
 
 
-- Collection
+## Collection
 
 Une collection est tous simplement un ensemble de document. On peut la comparer à une table. Par exemple, une collection de 50 auteurs contiendra 50 documents comme défini plus haut. MongoDB intègre des index notés _id unique pour chaque document.
 
