@@ -72,6 +72,6 @@ Sachez que le format JSON, provient directement du langage Javascript. D'ailleur
 
 # Premier pas avec MongoDB
 ## Installation
-je vous invite à le télécharger depuis ce lien [MongoDB](https://pages.github.com/)
+je vous invite à le télécharger depuis ce lien [MongoDB](https://www.mongodb.com/download-center/community)
 Si vous êtes sous Linux ubuntu vous pouvez facilement utilisé ce command : 
 ```sudo apt-get install MongoDB```
