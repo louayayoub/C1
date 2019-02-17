@@ -5,3 +5,7 @@ Fini le temps ou il fallait créer un schéma de tables relationnelles et créer
 
 ## Collection et Documents
 Avant de commencer à voir en détail le fonctionnement de MongoDB, il faut comprendre différentes notions. MongoDB stocke ses données sous le même format qu'un document JSON. Pour être plus exact, c'est la version binaire du JSON appelé BSON. Mais alors, c'est quoi un document JSON ?
+
+### Document 
+Un document JSON, c'est simplement un ensemble de clés et de valeurs dont la notation est la suivante :
+
