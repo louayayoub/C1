@@ -75,3 +75,9 @@ Sachez que le format JSON, provient directement du langage Javascript. D'ailleur
 si vous êtes sous windows vous pouvez le télécharger depuis ce lien [MongoDB](https://www.mongodb.com/download-center/community), ou
 si vous êtes sous Linux ubuntu vous pouvez facilement utilisé ce command : 
 ```sudo apt-get install MongoDB```
+## Lancement du serveur
+Sous linux, un daemon est automatiquement crée. Pour l’exécuter :
+```sudo /etc/init.d/mongod stop```
+Pour les autres, il suffit d’exécuter __mongod__ en spécifiant un chemin de stockage:
+```mongod --dbpath C:/mongoData```
+
