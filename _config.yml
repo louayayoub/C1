@@ -13,3 +13,5 @@ repository: louayayoub/C1
 plugins:
   - jekyll-sitemap
   - jekyll-seo-tag
+
+theme: jekyll-theme-cayman
