@@ -78,6 +78,23 @@ Si vous utilisez Linux Ubuntu, vous pouvez facilement l'installer avec cette com
 
 ### Etape d'installation sous windows
 
+[![1-](  "1")](images/1.png "1")
+
+[![2-](  "2")](images/2.png "2")
+
+[![3-](  "3")](https://github.com/louayayoub/C1/blob/master/images/3.png "3")
+
+[![4-](  "4")](https://github.com/louayayoub/C1/blob/master/images/4.png "4")
+
+[![5-](  "5")](https://github.com/louayayoub/C1/blob/master/images/5.png "5")
+
+[![6-](  "6")](https://github.com/louayayoub/C1/blob/master/images/6.png "6")
+
+
+[![7-](  "7")](https://github.com/louayayoub/C1/blob/master/images/7.png "7")
+
+[![8-](  "8")](https://github.com/louayayoub/C1/blob/master/images/8.png "8")
+
 
 
 
