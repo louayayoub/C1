@@ -1,6 +1,6 @@
 # Introduction	
 MongoDB est un système de gestion de bases de données ou [SGBD](https://sql.sh/sgbd) open source dévéloppé par [MongoDB Inc](https://www.mongodb.com/company) depuis 2007,il est comme [Mysql](https://www.mysql.com/fr/) ou [PostgreSql](https://www.postgresql.org/), mais dont le mécanisme est complètement différent.
-Il fait parti de la mouvance NoSQL.Son nom vient de l'anglais "humongus" qui peut être traduit par "énorme". L'objectif est donc de pouvoir gérer de très grandes quantité de données.
+Il fait parti de la mouvance NoSQL. Son nom vient de l'anglais "humongus" qui peut être traduit par "énorme". L'objectif est donc de pouvoir gérer de très grandes quantité de données.
 Fini le temps ou il fallait créer un schéma de tables relationnelles et créer des requêtes Sql complexes. Grâce à MongoDB vous allez pouvoir stocker vos données un peu comme vous le feriez dans un fichier [JSON](https://fr.wikipedia.org/wiki/JavaScript_Object_Notation). C'est à dire, une sorte de dictionnaire géant composé de clés et de valeurs. Ces données peuvent ensuite être exploitées par du [javascript](http://glossaire.infowebmaster.fr/javascript/), directement intégré dans MongoDB  
 
 # Collection et Documents
@@ -78,11 +78,11 @@ Si vous utilisez Linux Ubuntu, vous pouvez facilement l'installer avec cette com
 
 ### Etape d'installation sous windows
 
-[![1-]((images/1.png "1")](images/1.png "1")
+[![1-](images/1.png "1-")](images/1.png "1-")
 
-[![2-](images/2.png "2")](images/2.png "2")
+[![2-](https://louayayoub.github.io/C1/images/1.png "2-")](https://louayayoub.github.io/C1/images/1.png "2-")
 
-[![3-](https://github.com/louayayoub/C1/blob/master/images/3.png "3")](https://github.com/louayayoub/C1/blob/master/images/3.png "3")
+[![3-](  "3")](https://github.com/louayayoub/C1/blob/master/images/3.png "3")
 
 [![4-](  "4")](https://github.com/louayayoub/C1/blob/master/images/4.png "4")
 
