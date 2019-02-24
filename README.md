@@ -167,7 +167,7 @@ Pour continuer ce tutoriel, je veux créer une base de donnée **medical** , et 
 Vous pouvez faire **db** pour voir la base de donnée courante. Attention, si vous faites **show dbs**, vous ne verrez pas encore votre base. En effet, mongo attend d'avoir du contenu pour créer votre base.
 
 ## Insertion
-Pour créer une collection, il suffit simplement d'ajouter un patient. Par exemple pour:
+- Pour créer une collection, il suffit simplement d'ajouter un patient. Par exemple pour:
 
 
     {
@@ -190,13 +190,13 @@ La collection patients se crée automatiquement lors de la première utilisation
 Vous pouvez voir le document que vous venez d'ajouter.
 ***Notez***  que MongoDB ajoute automatiquement un **_id** si rien n'est spécifié.
 
-En guise d'exemple, on va remplir notre collections en répétant cette procédure 50 fois.
+- En guise d'exemple, on va remplir notre collections en répétant cette procédure 50 fois.
 
 
     > for ( var i = 0 ; i<50; i++){ db.patients.insert({"nom":"Toto" , "prenom":"Toto", "age": i})     }
     WriteResult({ "nInserted" : 1 })
 
-Vérifions le nombre de patients :
+- Vérifions le nombre de patients :
 
 
      > db.patients.count()
