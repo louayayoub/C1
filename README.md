@@ -244,6 +244,7 @@ Vous pouvez voir le document que vous venez d'ajouter.
         db.patients.update({prenom:"boby"}, {$set:{sexe:"male"}}, {multi:true})
 
 - Ajoute un patient olivier s'il n'existe pas
+       
         db.patients.update({prenom:"olivier"}, {$set:{sexe:"male"}}, {upsert:true})
 
 ### save(document, writeConcern)
