@@ -206,64 +206,45 @@ Vérifions le nombre de patients :
 ## Lister la collection
 ### find(critère, projection)
 - Utiliser find() pour retourner toute la liste de la collection patients.
-
-  
-
-      db.patients.find()
+        db.patients.find()
 - Pour récupérer les patients dont l'age = 5
+  
+        db.patients.find({age:5})
+- On peut aussi utiliser des expressions régulières. Par exemple, tous les prénoms commençant par "T"
+  
+        db.patients.find({prenom: /^T*/})
+- Pour récupérer les patients dont l'age est supérieur à 40
+  
+         db.patients.find({age:{>40}})
 
+- Pour récupérer les patients dont l'âge est 5 ou 10 :
 
+       db.patients.find({age:{$in:[5,10]}})
 
-    db.patients.find({age:5})
-- On peut aussi utiliser des expressions régulières. Par exemple, tous les prénoms commençant par "j"
+- Pour récupérer uniquement certaine clé, on utilise l'argument projection de find(). Par exemple, récupérer uniquement les noms des patients dont l'âge est supérieur à 40
 
+        db.patients.find({age:{>40}},{"nom":true})
 
+- Pour limiter le nombre de résultat à 3 :
 
-    db.patients.find({prenom: /^T*/})
-Pour récupérer les patients dont l'age est supérieur à 40
+        db.patients.find().limit(3)
 
+- Pour ordonner la liste par âge décroissant. -1 pour décroissant et 1 pour croissant.
 
-
-     db.patients.find({age:{>40}})
-$gt est un mot clef de mongo qui veut dire greater than (supérieur à). Pour voir la liste complète c'est ici.
-
-    db.patients.findOne({age:{>40}})
-
-
-Pour récupérer les patients dont l'âge est 5 ou 10 :
-
-    db.patients.find({age:{$in:[5,10]}})
-
-Pour récupérer uniquement certaine clé, on utilise l'argument projection de find(). Par exemple, récupérer uniquement les noms des patients dont l'âge est supérieur à 40
-
-    db.patients.find({age:{>40}},{"nom":true})
-
-Pour limiter le nombre de résultat à 3 :
-
-    db.patients.find().limit(3)
-	
-Pour ordonner la liste par âge décroissant. -1 pour décroissant et 1 pour croissant.
-
-    db.patients.find().sort(age:-1)
+        db.patients.find().sort(age:-1)
 
 ## Modifier la collection
 ### update(query, update, options)
 - Remplacer tous les prénoms Toto par boby
 
-
-
-    db.patients.update({"prenom":"Toto"},{$set:{"prenom":"boby"}},{multi:true})
+        db.patients.update({"prenom":"Toto"},{$set:{"prenom":"boby"}},{multi:true})
 
 - Ajoute une clé sexe à tous les patients
 
-
-
-    db.patients.update({prenom:"boby"}, {$set:{sexe:"male"}}, {multi:true})
+        db.patients.update({prenom:"boby"}, {$set:{sexe:"male"}}, {multi:true})
 
 - Ajoute un patient olivier s'il n'existe pas
-
-
-    db.patients.update({prenom:"olivier"}, {$set:{sexe:"male"}}, {upsert:true})
+        db.patients.update({prenom:"olivier"}, {$set:{sexe:"male"}}, {upsert:true})
 
 ### save(document, writeConcern)
 La différence avec insert est que save, fait un update du document s'il existe déjà.
@@ -274,18 +255,12 @@ La différence avec insert est que save, fait un update du document s'il existe 
 ### remove(query,justOne)
 - Supprimer tous les patients qui s'appellent olivier
 
- 
-
-          db.patients.remove({prenom:"olivier"})
+        db.patients.remove({prenom:"olivier"})
 
 - Supprimer la collection
-
-
-    
-      db.patients.drop()
+        db.patients.drop()
+		
 - Supprimer la base de donnée
-
-
 
         use medical
          db.runCommand({dropDatabase: 1})
