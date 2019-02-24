@@ -273,12 +273,19 @@ La différence avec insert est que save, fait un update du document s'il existe 
 ## Suppression
 ### remove(query,justOne)
 - Supprimer tous les patients qui s'appellent olivier
-       db.patients.remove({prenom:"olivier"})
+
+ 
+
+          db.patients.remove({prenom:"olivier"})
 
 - Supprimer la collection
-        db.patients.drop()
+
+
+    
+      db.patients.drop()
 - Supprimer la base de donnée
 
 
-     use medical
-     db.runCommand({dropDatabase: 1})
+
+        use medical
+         db.runCommand({dropDatabase: 1})
