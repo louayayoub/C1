@@ -3,6 +3,31 @@ MongoDB est un système de gestion de bases de données ou [SGBD](https://sql.sh
 Il fait parti de la mouvance NoSQL. Son nom vient de l'anglais "humongus" qui peut être traduit par "énorme". L'objectif est donc de pouvoir gérer de très grandes quantité de données.
 Fini le temps ou il fallait créer un schéma de tables relationnelles et créer des requêtes Sql complexes. Grâce à MongoDB vous allez pouvoir stocker vos données un peu comme vous le feriez dans un fichier [JSON](https://fr.wikipedia.org/wiki/JavaScript_Object_Notation). C'est à dire, une sorte de dictionnaire géant composé de clés et de valeurs. Ces données peuvent ensuite être exploitées par du [javascript](http://glossaire.infowebmaster.fr/javascript/), directement intégré dans MongoDB  
 
+# Pourquoi préférer MongoDB à MySQL?
+Les bases de données comme MongoDB sont excellentes lorsque vous connaissez généralement vos données (par opposition à la nécessité d'écrire plusieurs requêtes compliquées). Avec Mongo, les données "liées" sont soit imbriqué dans les données parentales, soit elles contiennent des clés primaires / étrangères. C'est génial si, par exemple, vous avez des messages et des commentaires; En général, vous ne pourrez pas afficher de commentaires en dehors du contexte d'une publication, il est donc logique que les commentaires soient contenus dans une publication (de cette façon, vous obtenez tous les commentaires pour la publication sans avoir besoin d'interroger une table séparée). D'autre part, si vous devez utiliser des fonctions agrégées et ressentir la nécessité d'interroger des données de manière complexe qui ne peuvent être obtenue grâce à des liens intégrés ou à des relations simples à Mongo, c'est à ce moment-là qu'il est temps d'utiliser un SGBDR comme MySQL ou PostgreSQL MongoDB n'est pas destiné à remplacer SQL. Il répond simplement à différents besoins, et MongoDB et un SGBDR peuvent être utilisés conjointement. MongoDB n'est pas si nécessaire si vous n'avez pas besoin que vos données soient flexibles ou intégrées dans un document parent. Le développement avec MongoDB est très amusant car il y a beaucoup moins d'étapes dans la réalisation et la gestion d'un projet.
+
+# Avantages
+
+#### Partage et équilibrage de charge
+Lorsque vous devez gérer des volumes de données volumineux pour gérer la distribution du trafic sur diverses machines afin de procéder à l'équilibrage de la charge, l'utilisation de MongoDB par rapport aux bases de données classiques présente un avantage considérable. Sharding est une approche unique de MongoDB, qui permet de répondre aux demandes liées à la croissance des données et permet la mise à l’échelle horizontale sur plusieurs machines afin de prendre en charge le volume croissant de données.
+
+#### Grande flexibilité
+Utiliser MongoDB est plus simple et plus polyvalent que d’autres SGBDR, car il n’a pas besoin de structure de données unifiée pour tous les objets. Cependant, pour les utilisateurs, la structure et la cohérence des données sont une bonne chose, il est donc toujours conseillé d’avoir une structure de données unifiée.
+
+#### La vitesse
+Comme les données sont stockées en un seul point, MongoDB fonctionne très vite. Par contre, cela ne fonctionne de cette manière que si toutes les données que vous manipulez sont un seul document. Lorsque vous travaillez sur des données qui sont un modèle relationnel, le traitement de requêtes indépendantes pour extraire des données peut prendre plus de temps.
+
+# Inconvenients
+#### Plus d'utilisation de la mémoire
+En stockant un nom de clé pour chaque document, MongoDB a besoin d'un espace mémoire plus important. Les jointures et les requêtes lentes ne sont pas non plus possibles. Vous devrez donc peut-être également traiter une quantité non négligeable de données en double.
+
+#### Aucune jointure
+Contrairement aux bases de données relationnelles, les jointures ne sont pas possibles avec MongoDB. Si vous avez besoin de jointures, vous devez effectuer plusieurs interrogations manuellement.
+
+#### Pas complètement développé
+MongoDB est une plate-forme relativement nouvelle qui est encore en développement alors que SQL était bien établi dans les années 1980. De plus, MongoDB n’est pas suffisamment documenté et doit faire face à des problèmes de manque de soutien.
+
+
 # Collection et Documents
 Avant de commencer à voir en détail le fonctionnement de MongoDB, il faut comprendre différentes notions. MongoDB stocke ses données sous le même format qu'un document JSON. Pour être plus exact, c'est la version binaire du JSON appelé [BSON](https://fr.wikipedia.org/wiki/BSON). Mais alors, c'est quoi un document [JSON](https://fr.wikipedia.org/wiki/JavaScript_Object_Notation) ?
 
@@ -167,7 +192,7 @@ Pour continuer ce tutoriel, je veux créer une base de donnée **medical** , et 
 Vous pouvez faire **db** pour voir la base de donnée courante. Attention, si vous faites **show dbs**, vous ne verrez pas encore votre base. En effet, mongo attend d'avoir du contenu pour créer votre base.
 
 ## Insertion
-- Pour créer une collection, il suffit simplement d'ajouter un patient. Par exemple pour:
+Pour créer une collection, il suffit simplement d'ajouter un patient. Par exemple pour:
 
 
     {
@@ -190,13 +215,13 @@ La collection patients se crée automatiquement lors de la première utilisation
 Vous pouvez voir le document que vous venez d'ajouter.
 ***Notez***  que MongoDB ajoute automatiquement un **_id** si rien n'est spécifié.
 
-- En guise d'exemple, on va remplir notre collections en répétant cette procédure 50 fois.
+En guise d'exemple, on va remplir notre collections en répétant cette procédure 50 fois.
 
 
     > for ( var i = 0 ; i<50; i++){ db.patients.insert({"nom":"Toto" , "prenom":"Toto", "age": i})     }
     WriteResult({ "nInserted" : 1 })
 
-- Vérifions le nombre de patients :
+Vérifions le nombre de patients :
 
 
      > db.patients.count()
@@ -244,7 +269,6 @@ Vous pouvez voir le document que vous venez d'ajouter.
         db.patients.update({prenom:"boby"}, {$set:{sexe:"male"}}, {multi:true})
 
 - Ajoute un patient olivier s'il n'existe pas
-       
         db.patients.update({prenom:"olivier"}, {$set:{sexe:"male"}}, {upsert:true})
 
 ### save(document, writeConcern)
@@ -253,16 +277,14 @@ La différence avec insert est que save, fait un update du document s'il existe 
     db.patient.save({"prenom":"Toto", "nom":"Van Damme"})
 
 ## Suppression
-### Remove(query,justOne)
-
+### remove(query,justOne)
 - Supprimer tous les patients qui s'appellent olivier
 
         db.patients.remove({prenom:"olivier"})
 
 - Supprimer la collection
-       
         db.patients.drop()
-		
+
 - Supprimer la base de donnée
 
         use medical
