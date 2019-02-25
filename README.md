@@ -289,3 +289,7 @@ La différence avec insert est que save, fait un update du document s'il existe 
 
         use medical
          db.runCommand({dropDatabase: 1})
+
+# Utilisation du mongoDB dans java
+
+- Voici un petit exemple d'utilisation du mondoDB dans un code java [Voir l'exemple](https://github.com/louayayoub/C1/ "cliquer ici")
