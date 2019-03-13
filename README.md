@@ -28,13 +28,14 @@ Contrairement aux bases de données relationnelles, les jointures ne sont pas po
 MongoDB est une plate-forme relativement nouvelle qui est encore en développement alors que SQL était bien établi dans les années 1980. De plus, MongoDB n’est pas suffisamment documenté et doit faire face à des problèmes de manque de soutien.
 
 ## Tableau comparatif entre les terminologies Mongo et celles du SQL:
+
 | SQL  | MongoDB |
 | :------------: | :------------: |
 | database   | database  |
 | table  |  collection |
 | enregistrement  | document  |
 | colonne | champ  |
-| clef primaire  | clef primaire (Dans MongoDB la clef primaire est automatiquement attribué au champ _id)  |
+| clef primaire  | clef primaire (Dans MongoDB la clef primaire est automatiquement attribué au champ _id) |
 | clef étrangère  | reférence  |
 
 
