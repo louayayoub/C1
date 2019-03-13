@@ -27,6 +27,17 @@ Contrairement aux bases de données relationnelles, les jointures ne sont pas po
 #### Pas complètement développé
 MongoDB est une plate-forme relativement nouvelle qui est encore en développement alors que SQL était bien établi dans les années 1980. De plus, MongoDB n’est pas suffisamment documenté et doit faire face à des problèmes de manque de soutien.
 
+## Tableau comparatif entre les terminologies Mongo et celles du SQL:
+| SQL  | MongoDB |
+| :------------: | :------------: |
+| database   | database  |
+| table  |  collection |
+| enregistrement  | document  |
+| colonne | champ  |
+| clef primaire  | clef primaire (Dans MongoDB la clef primaire est automatiquement attribué au champ _id)  |
+| clef étrangère  | reférence  |
+
+
 
 # Collection et Documents
 Avant de commencer à voir en détail le fonctionnement de MongoDB, il faut comprendre différentes notions. MongoDB stocke ses données sous le même format qu'un document JSON. Pour être plus exact, c'est la version binaire du JSON appelé [BSON](https://fr.wikipedia.org/wiki/BSON). Mais alors, c'est quoi un document [JSON](https://fr.wikipedia.org/wiki/JavaScript_Object_Notation) ?
@@ -293,3 +304,6 @@ La différence avec insert est que save, fait un update du document s'il existe 
 # Utilisation du mongoDB dans java
 
 - Voici un petit exemple d'utilisation du mondoDB dans un code java [Voir l'exemple](https://github.com/louayayoub/C1/ "cliquer ici")
+
+# Conclusion
+le modèle NoSQL représente une nouvelle catégorie de SGBD. Il ne s’agit pas de remplacer entièrement les bases relationnelles en bases NoSQL, il s’agit plutôt de fournir une solution alternative là ou les modèles en place montrent leurs limites. Certains projets font d’ailleurs cohabiter les deux types de systèmes au sein d’une même application, permettant ainsi de bénéficier des avantages de chacun.
