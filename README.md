@@ -304,7 +304,7 @@ La différence avec insert est que save, fait un update du document s'il existe 
 
 # Utilisation du mongoDB dans java
 
-- Voici un petit exemple d'utilisation du mondoDB dans un code java [Voir l'exemple](https://github.com/louayayoub/C1/ "cliquer ici")
+- Voici un petit exemple d'utilisation du mondoDB dans un code java [Voir l'exemple](https://github.com/louayayoub/C1/tree/master/comparaison-java-mongodb-mysql "cliquer ici")
 
 # Conclusion
 le modèle NoSQL représente une nouvelle catégorie de SGBD. Il ne s’agit pas de remplacer entièrement les bases relationnelles en bases NoSQL, il s’agit plutôt de fournir une solution alternative là ou les modèles en place montrent leurs limites. Certains projets font d’ailleurs cohabiter les deux types de systèmes au sein d’une même application, permettant ainsi de bénéficier des avantages de chacun.
