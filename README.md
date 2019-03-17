@@ -28,7 +28,7 @@ Contrairement aux bases de données relationnelles, les jointures ne sont pas po
 #### Pas complètement développé
 MongoDB est une plate-forme relativement nouvelle qui est encore en développement alors que SQL était bien établi dans les années 1980. De plus, MongoDB n’est pas suffisamment documenté et doit faire face à des problèmes de manque de soutien.
 
-## Tableau comparatif entre les terminologies Mongo et celles du SQL:
+# Tableau comparatif entre les terminologies Mongo et celles du SQL:
 
 | SQL  | MongoDB |
 | :------------: | :------------: |
@@ -41,10 +41,10 @@ MongoDB est une plate-forme relativement nouvelle qui est encore en développeme
 
 
 
-# Collection et Documents
+## Collection et Documents
 Avant de commencer à voir en détail le fonctionnement de MongoDB, il faut comprendre différentes notions. MongoDB stocke ses données sous le même format qu'un document JSON. Pour être plus exact, c'est la version binaire du JSON appelé [BSON](https://fr.wikipedia.org/wiki/BSON). Mais alors, c'est quoi un document [JSON](https://fr.wikipedia.org/wiki/JavaScript_Object_Notation) ?
 
-## Document 
+### Document 
 Les documents sont les unités de base dans une base MongoDB. Ils sont équivalents aux objets JSON et sont comparables aux enregistrements d'une table dans une base de données relationnelle.
 
 Tout document appartient à une collection et a un champ appelé _id qui identifie le document dans la base de données.
@@ -89,7 +89,7 @@ books: [
 Si vous regardez la liste de livres, vous remarquerez qu'il n'est pas nécessaire de respecter la cohérence des champs d'une base Sql. En effet, il y a deux champs title et date pour les deux premiers livres, et 3 pour le dernier.
 
 
-## Collection
+### Collection
 
 Une collection est tous simplement un ensemble de document, l'équivalent d'une table en relationnel. Contrairement aux bases de données relationnelles, les champs des documents d'une collection sont libres et peuvent être différents d'un document à un autre. Le seul champ commun est obligatoire est le champ "_id".
 . On peut la comparer à une table. Par exemple, une collection de 50 auteurs contiendra 50 documents comme défini plus haut. MongoDB intègre des index notés _id unique pour chaque document.
