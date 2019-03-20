@@ -158,7 +158,7 @@ Pour les autres, il suffit d’exécuter __mongod__ en spécifiant un chemin de 
 ```mongod --dbpath C:/mongodata```
 
 ## Connecter au serveur
-Exécuter le client **mongo** depuis votre terminal. Par défaut, il se connecte au serveur **mongod** en localhost sur le port 27017
+Exécuter le commande **mongo** depuis votre terminal. Par défaut, il se connecte au serveur **mongod** en localhost sur le port 27017
 
 ```
 PS C:\Users\Louay> mongod --dbpath C:/mongodata
