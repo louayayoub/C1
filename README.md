@@ -116,9 +116,10 @@ Sachez que le format JSON, provient directement du langage Javascript. D'ailleur
 
 # Premier pas avec MongoDB
 ## Installation
+**-  installation sous windows**
 si vous êtes sous windows vous pouvez télécharger un file msi depuis ce lien [https://www.mongodb.com/download-center/community](https://www.mongodb.com/download-center/community), et suivre les etapes suivantes:
 
-**-  installation sous windows**
+
 
 **1. **
 [![1-](images/1.png "1-")](https://louayayoub.github.io/C1/images/1.png "1-")
