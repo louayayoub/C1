@@ -161,29 +161,39 @@ Pour les autres, il suffit d’exécuter __mongod__ en spécifiant un chemin de 
 Exécuter le client **mongo** depuis votre terminal. Par défaut, il se connecte au serveur **mongod** en localhost sur le port 27017
 
 ```
-Microsoft Windows [Version 10.0.17763.316]
-(c) 2018 Microsoft Corporation. All rights reserved.
-
-C:\Users\Louay>mongo
-MongoDB shell version v4.0.6
-connecting to: mongodb://127.0.0.1:27017/?gssapiServiceName=mongodb
-Implicit session: session { "id" : UUID("ed633c7f-7de5-461f-8999-d89f52087eb9") }
-MongoDB server version: 4.0.6
-Server has startup warnings:
-2019-02-24T15:10:15.633+0200 I CONTROL  [initandlisten]
-2019-02-24T15:10:15.633+0200 I CONTROL  [initandlisten] ** WARNING: Access control is not enabled for the database.
-2019-02-24T15:10:15.633+0200 I CONTROL  [initandlisten] **          Read and write access to data and configuration is unrestricted.
-2019-02-24T15:10:15.634+0200 I CONTROL  [initandlisten]
----
-Enable MongoDB  free cloud-based monitoring service, which will then receive and display
-metrics about your deployment (disk utilization, CPU, operation statistics, etc).
-
-The monitoring data will be available on a MongoDB website with a unique URL accessible to you
-and anyone you share the URL with. MongoDB may use this information to make product
-improvements and to suggest MongoDB products and deployment options to you.
-
-To enable free monitoring, run the following command: db.enableFreeMonitoring()
-To permanently disable this reminder, run the following command: db.disableFreeMonitoring()
+PS C:\Users\Louay> mongod --dbpath C:/mongodata
+2019-03-20T22:05:56.800+0200 I CONTROL  [main] Automatically disabling TLS 1.0, to force-enable TLS 1.0 specify --sslDisabledProtocols 'none'
+2019-03-20T22:05:56.804+0200 I CONTROL  [initandlisten] MongoDB starting : pid=7944 port=27017 dbpath=C:/mongodata 64-bit host=unknow
+2019-03-20T22:05:56.804+0200 I CONTROL  [initandlisten] targetMinOS: Windows 7/Windows Server 2008 R2
+2019-03-20T22:05:56.804+0200 I CONTROL  [initandlisten] db version v4.0.6
+2019-03-20T22:05:56.804+0200 I CONTROL  [initandlisten] git version: caa42a1f75a56c7643d0b68d3880444375ec42e3
+2019-03-20T22:05:56.805+0200 I CONTROL  [initandlisten] allocator: tcmalloc
+2019-03-20T22:05:56.805+0200 I CONTROL  [initandlisten] modules: none
+2019-03-20T22:05:56.805+0200 I CONTROL  [initandlisten] build environment:
+2019-03-20T22:05:56.805+0200 I CONTROL  [initandlisten]     distmod: 2008plus-ssl
+2019-03-20T22:05:56.806+0200 I CONTROL  [initandlisten]     distarch: x86_64
+2019-03-20T22:05:56.806+0200 I CONTROL  [initandlisten]     target_arch: x86_64
+2019-03-20T22:05:56.806+0200 I CONTROL  [initandlisten] options: { storage: { dbPath: "C:/mongodata" } }
+2019-03-20T22:05:56.809+0200 I STORAGE  [initandlisten] Detected data files in C:/mongodata created by the 'wiredTiger' storage engine, so setting the active storage engine to 'wiredTiger'.
+2019-03-20T22:05:56.809+0200 I STORAGE  [initandlisten] wiredtiger_open config: create,cache_size=3541M,session_max=20000,eviction=(threads_min=4,threads_max=4),config_base=false,statistics=(fast),log=(enabled=true,archive=true,path=journal,compressor=snappy),file_manager=(close_idle_time=100000),statistics_log=(wait=0),verbose=(recovery_progress),
+2019-03-20T22:05:57.188+0200 I STORAGE  [initandlisten] WiredTiger message [1553112357:188338][7944:140726770490080], txn-recover: Main recovery loop: starting at 5/5888 to 6/256
+2019-03-20T22:05:57.427+0200 I STORAGE  [initandlisten] WiredTiger message [1553112357:426526][7944:140726770490080], txn-recover: Recovering log 5 through 6
+2019-03-20T22:05:57.596+0200 I STORAGE  [initandlisten] WiredTiger message [1553112357:595890][7944:140726770490080], txn-recover: Recovering log 6 through 6
+2019-03-20T22:05:57.718+0200 I STORAGE  [initandlisten] WiredTiger message [1553112357:717814][7944:140726770490080], txn-recover: Set global recovery timestamp: 0
+2019-03-20T22:05:58.052+0200 I RECOVERY [initandlisten] WiredTiger recoveryTimestamp. Ts: Timestamp(0, 0)
+2019-03-20T22:05:58.194+0200 I CONTROL  [initandlisten]
+2019-03-20T22:05:58.195+0200 I CONTROL  [initandlisten] ** WARNING: Access control is not enabled for the database.
+2019-03-20T22:05:58.196+0200 I CONTROL  [initandlisten] **          Read and write access to data and configuration is unrestricted.
+2019-03-20T22:05:58.197+0200 I CONTROL  [initandlisten]
+2019-03-20T22:05:58.197+0200 I CONTROL  [initandlisten] ** WARNING: This server is bound to localhost.
+2019-03-20T22:05:58.198+0200 I CONTROL  [initandlisten] **          Remote systems will be unable to connect to this server.
+2019-03-20T22:05:58.199+0200 I CONTROL  [initandlisten] **          Start the server with --bind_ip <address> to specify which IP
+2019-03-20T22:05:58.199+0200 I CONTROL  [initandlisten] **          addresses it should serve responses from, or with --bind_ip_all to
+2019-03-20T22:05:58.200+0200 I CONTROL  [initandlisten] **          bind to all interfaces. If this behavior is desired, start the
+2019-03-20T22:05:58.201+0200 I CONTROL  [initandlisten] **          server with --bind_ip 127.0.0.1 to disable this warning.
+2019-03-20T22:05:58.201+0200 I CONTROL  [initandlisten]
+2019-03-20T22:05:59.366+0200 I FTDC     [initandlisten] Initializing full-time diagnostic data capture with directory 'C:/mongodata/diagnostic.data'
+2019-03-20T22:05:59.370+0200 I NETWORK  [initandlisten] waiting for connections on port 27017
 ---
 >
 ```
